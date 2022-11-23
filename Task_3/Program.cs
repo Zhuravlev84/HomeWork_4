@@ -7,13 +7,14 @@
 int N = ReadOn ("Введите число: ");
 int [] Numbers  = new int [N];
 int i = 0;
+WriteOn("[ ");
 while (i < Numbers.Length)
 {
 Numbers[i] = new Random().Next(0,100);
 WriteOn ($"{Numbers[i]} ");
 i++;
 }
-
+WriteOn("]");
 void WriteOn (string message)
 {
     Console.Write(message);

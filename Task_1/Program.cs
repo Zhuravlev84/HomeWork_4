@@ -6,11 +6,17 @@
 
 2, 4 -> 16*/
 
-int a = 3;
-int b = 5;
+int a = ReadOn("Введите первое число: ");
+int b = ReadOn("Введите второе число: ");
 int sum = 1;
 for (int count = 1;count <= b; count++)
 {
     sum = sum*a; 
 }
-Console.Write(sum);
+Console.Write($"Ответ: {sum}");
+
+int ReadOn (string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
